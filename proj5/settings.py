@@ -91,6 +91,7 @@ INSTALLED_APPS = [
     'posts',
     'comments',
     'likes',
+    'favourites',
     'followers',
 ]
 

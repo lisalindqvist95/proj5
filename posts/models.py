@@ -31,14 +31,9 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_nhqkkf', blank=True
     )
-    image = models.ImageField(
-        upload_to='images/', default='../default_post_nhqkkf', blank=True
-    )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
-    favourites = models.ManyToManyField(
-        User, related_name='favourite', default=None, blank=True)
 
     class Meta:
         ordering = ['-created_at']
