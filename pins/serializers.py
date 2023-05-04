@@ -1,17 +1,17 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from favourites.models import Favourite
+from pins.models import Pin
 
 
-class FavouriteSerializer(serializers.ModelSerializer):
+class PinSerializer(serializers.ModelSerializer):
     """
-    Serializer for the Like model
+    Serializer for the Pin model
     The create method handles the unique constraint on 'owner' and 'post'
     """
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
-        model = Favourite
+        model = Pin
         fields = ['id', 'created_at', 'owner', 'post']
 
     def create(self, validated_data):
