@@ -4,6 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from proj5.permissions import IsOwnerOrReadOnly
 from .models import Profile
 from .serializers import ProfileSerializer
+from posts.models import Post
 
 
 class ProfileList(generics.ListAPIView):
@@ -45,3 +46,12 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
         following_count=Count('owner__following', distinct=True)
     ).order_by('-created_at')
     serializer_class = ProfileSerializer
+
+
+def favourite_add(request, id):
+    post = get_object_or_404(Post, id=id)
+    if post.favourites.filter(id=request.user.id).exist():
+        post.favourites.remove(request.user)
+    else:
+        post.favourites.add(request.user)
+    return HttpResponseRedirect(request.Meta['HTTP_REFERER'])
