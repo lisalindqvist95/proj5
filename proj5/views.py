@@ -6,7 +6,7 @@ from .settings import (
 )
 
 
-# dj-resy-auth logout view fix
+# dj-rest-auth logout view fix
 @api_view(['POST'])
 def logout_route(request):
     response = Response()
@@ -19,7 +19,7 @@ def logout_route(request):
         samesite=JWT_AUTH_SAMESITE,
         secure=JWT_AUTH_SECURE,
     )
-    respone.set_cookie(
+    response.set_cookie(
         key=JWT_AUTH_REFRESH_COOKIE,
         value='',
         httponly=True,
