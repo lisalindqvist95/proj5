@@ -14,7 +14,7 @@ class PinSerializer(serializers.ModelSerializer):
         model = Pin
         fields = ['id', 'created_at', 'owner', 'post']
 
-    def create(validated_data):
+    def create(self, validated_data):
         try:
             return super().create(validated_data)
         except IntegrityError:
