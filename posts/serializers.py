@@ -60,14 +60,14 @@ class PostSerializer(serializers.ModelSerializer):
                 owner=user, post=obj
             ).first()
             return pin.id if pin else None
-        return None 
+        return None
 
     def create(self, validated_data):
         uploaded_images = validated_data.pop("uploaded_images")
         post = Post.objects.create(**validated_data)
         for image in uploaded_images:
             newpost_image = PostImages.objects.create(post=post, image=image)
-        
+
         return post
 
     class Meta:
@@ -75,7 +75,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'created_at', 'updated_at',
-            'title', 'content', 'image', 'image_filter',
-            'like_id', 'likes_count', 'comments_count',
-            'pin_id', 'pins_count', 'images', 'uploaded_images'
+            'title', 'content', 'images', 'uploaded_images',
+            'image_filter', 'like_id', 'likes_count', 'comments_count',
+            'pin_id', 'pins_count'
         ]
