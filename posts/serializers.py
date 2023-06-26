@@ -1,17 +1,11 @@
 from rest_framework import serializers
-from posts.models import Post, PostImages
+from posts.models import Post
 from likes.models import Like
 from pins.models import Pin
 
 
-class PostImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PostImages
-        fields = ["id", "post", "image"]
-
-
 class PostSerializer(serializers.ModelSerializer):
-    images = PostImageSerializer(many=True, read_only=True)
+    image = serializers.ImageField(read_only=True)
     uploaded_images = serializers.ListField(
         child=serializers.ImageField(max_length=1000000, allow_empty_file=False, use_url=False),
         write_only=True
@@ -61,13 +55,6 @@ class PostSerializer(serializers.ModelSerializer):
             ).first()
             return pin.id if pin else None
         return None
-
-    def create(self, validated_data):
-        uploaded_image = validated_data.pop("uploaded_images")
-        post = Post.objects.create(**validated_data)
-        for image in uploaded_image:
-            newpost_image = PostImages.objects.create(post=post, image=image)
-        return post
 
     class Meta:
         model = Post
