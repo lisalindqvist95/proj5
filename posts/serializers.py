@@ -11,9 +11,9 @@ class PostImageSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    image = PostImageSerializer(many=True, read_only=True)
+    images = PostImageSerializer(many=True, read_only=True)
     uploaded_images = serializers.ListField(
-        child=serializers.ImageField(max_length=1000000, allow_empty_file=False, use_url = False),
+        child=serializers.ImageField(max_length=1000000, allow_empty_file=False, use_url=False),
         write_only=True
     )
 
@@ -67,7 +67,6 @@ class PostSerializer(serializers.ModelSerializer):
         post = Post.objects.create(**validated_data)
         for image in uploaded_image:
             newpost_image = PostImages.objects.create(post=post, image=image)
-
         return post
 
     class Meta:
@@ -75,7 +74,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'created_at', 'updated_at',
-            'title', 'content', 'image', 'uploaded_image',
+            'title', 'content', 'images', 'uploaded_images',
             'image_filter', 'like_id', 'likes_count', 'comments_count',
             'pin_id', 'pins_count'
         ]
