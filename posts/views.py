@@ -49,8 +49,8 @@ class PostList(generics.ListCreateAPIView):
             images = request.FILES.getlist('images')
             for image in images:
                 MultipleImage.objects.create(images=image)
-    images = MultipleImage.objects.all()
-    return render(request, 'index.html', {'images': images})
+        images = MultipleImage.objects.all()
+        return render(request, 'index.html', {'images': images})
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
