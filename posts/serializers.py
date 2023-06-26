@@ -5,12 +5,6 @@ from pins.models import Pin
 
 
 class PostSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField(read_only=True)
-    uploaded_images = serializers.ListField(
-        child=serializers.ImageField(max_length=1000000, allow_empty_file=False, use_url=False),
-        write_only=True
-    )
-
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')

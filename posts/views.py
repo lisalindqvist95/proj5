@@ -6,6 +6,15 @@ from .models import Post
 from .serializers import PostSerializer
 
 
+def upload(request):
+    if request.method == "POST":
+        images = request.FILES.getlist('images')
+        for image in images:
+            MultipleImage.objects.create(images=image)
+    images = MultipleImage.objects.all()
+    return render(request, 'index.html', {'images': images})
+
+
 class PostList(generics.ListCreateAPIView):
     """
     List posts or create a post if logged in
