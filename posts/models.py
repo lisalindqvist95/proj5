@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class Post(models.Model):
     """
