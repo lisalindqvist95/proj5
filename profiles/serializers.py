@@ -2,6 +2,9 @@ from rest_framework import serializers
 from .models import Profile
 from followers.models import Follower
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')

@@ -3,6 +3,9 @@ from proj5.permissions import IsOwnerOrReadOnly
 from .models import Follower
 from .serializers import FollowerSerializer
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class FollowerList(generics.ListCreateAPIView):
     """

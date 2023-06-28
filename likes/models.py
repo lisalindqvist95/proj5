@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from posts.models import Post
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class Like(models.Model):
     """

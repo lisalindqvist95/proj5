@@ -2,6 +2,9 @@ from django.db import IntegrityError
 from rest_framework import serializers
 from likes.models import Like
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class LikeSerializer(serializers.ModelSerializer):
     """

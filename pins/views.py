@@ -3,6 +3,9 @@ from proj5.permissions import IsOwnerOrReadOnly
 from pins.models import Pin
 from pins.serializers import PinSerializer
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class PinList(generics.ListCreateAPIView):
     """

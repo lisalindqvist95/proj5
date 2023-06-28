@@ -5,6 +5,9 @@ from proj5.permissions import IsOwnerOrReadOnly
 from .models import Profile
 from .serializers import ProfileSerializer
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class ProfileList(generics.ListAPIView):
     """

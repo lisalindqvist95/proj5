@@ -3,6 +3,10 @@ from rest_framework import serializers
 from pins.models import Pin
 
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
+
 class PinSerializer(serializers.ModelSerializer):
     """
     Serializer for the Pin model

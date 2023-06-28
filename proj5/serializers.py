@@ -1,6 +1,9 @@
 from dj_rest_auth.serializers import UserDetailsSerializer
 from rest_framework import serializers
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class CurrentUserSerializer(UserDetailsSerializer):
     profile_id = serializers.ReadOnlyField(source='profile.id')

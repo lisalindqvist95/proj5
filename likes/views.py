@@ -3,6 +3,9 @@ from proj5.permissions import IsOwnerOrReadOnly
 from likes.models import Like
 from likes.serializers import LikeSerializer
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class LikeList(generics.ListCreateAPIView):
     """

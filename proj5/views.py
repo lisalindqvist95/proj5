@@ -5,6 +5,9 @@ from .settings import (
     JWT_AUTH_SECURE,
 )
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 # dj-rest-auth logout view fix
 @api_view(['POST'])

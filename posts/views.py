@@ -5,6 +5,9 @@ from proj5.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostSerializer
 
+# CREDIT: Adapted from the Code Institute DRF Tutorial Project
+# URL:    https://github.com/Code-Institute-Solutions/drf-api
+
 
 class PostList(generics.ListCreateAPIView):
     """
