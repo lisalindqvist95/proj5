@@ -28,7 +28,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    products = models.TextField(blank=True)
+    makeup = models.TextField(blank=True)
     product_links = models.URLField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_nhqkkf', blank=True
