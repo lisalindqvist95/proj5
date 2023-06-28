@@ -29,7 +29,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     makeup = models.TextField(blank=True)
-    makeup_links = models.URLField(blank=True)
+    makeup_links = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_nhqkkf', blank=True
     )
