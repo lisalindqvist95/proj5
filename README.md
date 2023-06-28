@@ -19,18 +19,10 @@ All Python files passed through Pep8.
 
 #### Manual Testing
 
-## Security Features and Defensive Design
-
-### User Authentication
-Django's UserPassesTestMixin is used so that only users who created the comment edit/delete it.
-
-### Form Validation
-The form won't submit if it contains empty or invalid data.
+## Security Features 
 
 ### Database Security
 An env.py file is used to store the database url and secret key to prevent unwanted connections to the database.
-Cross-Site Request Forgery (CSRF) tokens are used on the forms on the site.
-
 
 
 ## Deployment
@@ -75,35 +67,21 @@ Click View to view the deployed site.
 
 ## Languages
 Python
-HTML
-CSS
-Javascript
+Django
+Django REST-framework
 
 ## Frameworks & Libraries Used
-Django: Main framework used for the project
-Django-allauth: Authentication library used for the project
-PostgreSQL Used as database
-Heroku: Used for deployement
-Chrome Dev Tools: Used to test responsiveness
-Font Awesome: Used for icons
-GitHub: Used for version control and agile tool
-Google Fonts: Used for fonts
-W3C: Used to validate HTML & CSS
-PEP8 Online: used to validate Python code
-Summernote: Editor to allow users to edit their posts
-Crispy Forms: used for Django Forms
-Cloudinary: Image hosting service
-Bootstrap: CSS Framework for responsiveness and styling
-Tables Generator: Used to create markdown table
+ - [Cloudinary](https://cloudinary.com/): Image hosting service 
+ - [Django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/): Authentication library used for the project 
+ - [PostgreSQL](https://www.postgresql.org/): Used as database
+ - [Heroku](https://id.heroku.com/login): Used for deployement
+ - [GitHub](https://github.com/): Used for version control and agile tool 
+ - [PEP8 Online](http://ww1.pep8online.com/): used to validate Python code
+ 
 
 ## Credits
-W3Schools
-Django Docs
-Bootstrap
-Stack Overflow
-Code Institute - Blog Walkthrough Project
-AliOKeeffe - Easy Eater Project
-Unsplash
-Adobe stock
+ - [Tables Generator](https://www.tablesgenerator.com/markdown_tables): Used to create markdown table
+ - [Stack Overflow](https://stackoverflow.com/)
+ - [Code Institute - Django REST Framework Walkthrough Project](https://github.com/Code-Institute-Solutions/drf-api/tree/ed54af9450e64d71bc4ecf16af0c35d00829a106)
 
 
