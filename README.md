@@ -1,14 +1,7 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 # Glimpse
 
 ## Project Goals:
 Glimpse is a content sharing app for makeup-artists and enthusiasts to share content. The users are able to follow each other, like each others content and pin things for later. The goal for the user is to find inspiration, share their work and find other like-minded people. This is the API that tracks and stores users, likes, pins, posts and followers. 
-
-## Data Model
-This Project is based around Object-Oriented Programming.
-***It is built with Django’s Class-Based Generic Views and Django AllAuth is used as the authentication system.
-The project has a Post model wich allows the admin to create blogposts and a Comment model which allows users to comment on posts.***
 
 ## Testing
 
@@ -19,11 +12,22 @@ All Python files passed through Pep8.
 
 #### Manual Testing
 
+Manual testing involved visiting each URL to make sure that the correct results were returned. See results below:
+
+| URL         | Passed Y/N? |
+|-------------|-------------|
+| root        | Y           |
+| /profiles/  | Y           |
+| /posts/     | Y           |
+| /comments/  | Y           |
+| /likes/     | Y           |
+| /pins/      | Y           |
+| /followers/ | Y           |
+
 ## Security Features 
 
 ### Database Security
 An env.py file is used to store the database url and secret key to prevent unwanted connections to the database.
-
 
 ## Deployment
 This project was depolyed via Heroku from the GitHub repository. See the steps taken below:
@@ -70,7 +74,7 @@ Click View to view the deployed site.
 ## Languages
 Python
 Django
-Django REST-framework
+Django REST framework
 
 ## Frameworks & Libraries Used
  - [Cloudinary](https://cloudinary.com/): Image hosting service 
