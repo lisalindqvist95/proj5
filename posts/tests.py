@@ -3,6 +3,7 @@ from .models import Post
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+
 class PostListViewTests(APITestCase):
     def setUp(self):
         User.objects.create_user(username='admin', password='admin123')

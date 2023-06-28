@@ -5,6 +5,7 @@ from posts.models import Post
 # CREDIT: Adapted from the Code Institute DRF Tutorial Project
 # URL:    https://github.com/Code-Institute-Solutions/drf-api
 
+
 class Comment(models.Model):
     """
     Comment model, related to User and Post

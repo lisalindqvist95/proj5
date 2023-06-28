@@ -5,6 +5,7 @@ from .models import Comment
 # CREDIT: Adapted from the Code Institute DRF Tutorial Project
 # URL:    https://github.com/Code-Institute-Solutions/drf-api
 
+
 class CommentSerializer(serializers.ModelSerializer):
     """
     Serializer for the Comment model
