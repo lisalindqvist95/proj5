@@ -3,7 +3,7 @@
 ## Project Goals:
 Glimpse is a content sharing app for makeup-artists and enthusiasts to share content. The users are able to follow each other, like each others content and pin things for later. The goal for the user is to find inspiration, share their work and find other like-minded people. This is the API that tracks and stores users, likes, pins, posts and followers. 
 
-Frontend can be found [here](https://github.com/lisalindqvist95/proj5_frontend).
+Frontend repository can be found [here](https://github.com/lisalindqvist95/proj5_frontend).
 Live API can be found [here](https://proj5-api.herokuapp.com/).
 
 ## Testing
