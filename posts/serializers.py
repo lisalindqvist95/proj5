@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from posts.models import Post
+from .models import Post
 from likes.models import Like
 from pins.models import Pin
 
@@ -61,4 +61,5 @@ class PostSerializer(serializers.ModelSerializer):
             'title', 'content', 'makeup_products',
             'image', 'image_filter', 'like_id', 'likes_count',
             'comments_count', 'pin_id', 'pins_count',
+
         ]
